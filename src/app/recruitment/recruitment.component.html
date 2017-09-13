@@ -1,0 +1,61 @@
+<!--recruitment-->
+<section class="recruitment">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h1>AN TÍN - NƠI KIẾN TẠO NHỮNG HÀNH TRÌNH HẠNH PHÚC</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <p>An Tín Travel là nơi hội tụ những con người ưu tú có lòng yêu nước và tự hào dân tộc, có tài năng và bản lĩnh, có tinh thần làm việc đam mê nhằm kiến tạo nên những hành trình hạnh phúc với sứ mệnh phụng sự khách hàng, phụng sự tổ quốc, phụng sự nhân loại. </p>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <p>Với tầm nhìn trở thành tập đoàn đầu tư và du lịch hàng đầu Việt Nam, vươn ra khu vực và thế giới, chúng tôi luôn chào đón tất cả các ứng viên đang tâm huyết tìm kiếm một môi trường làm việc chuyên nghiệp, năng động, hiện đại và đậm bản sắc văn hóa doanh nghiệp.</p>
+      </div>
+    </div>
+      <div class="row row2">
+        <div class="col-md-4 col-sm-6">
+            <img class="img-responsive" src="assets/img/service/recruitment1.jpg" alt="">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img class="img-responsive" src="assets/img/service/recruitment2.jpg" alt="">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img class="img-responsive" src="assets/img/service/recruitment3.jpg" alt="">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="box-recruitment bg-img">
+            <h2>Ông Nguyễn Đức Minh</h2>
+            <p>Cố vấn cấp cao Công ty CP Truyền thông và Du lịch An Tín</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="box-recruitment bg-black">
+            <h2>Chính sách phúc lợi</h2>
+            <p>CV sau khi nộp trực tuyến thành công thì trong 1 tuần Phòng Tuyển dụng sẽ liện hệ với những CV phù hợp với công việc đang tuyển của An Tín Travel</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="box-recruitment bg-primary">
+            <h2>HỎI - ĐÁP</h2>
+            <p>CV sau khi nộp trực tuyến thành công thì trong 1 tuần Phòng Tuyển dụng sẽ liện hệ với những CV phù hợp với công việc đang tuyển của An Tín Travel</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-4 item" *ngFor="let job of jobs; let index = index;">
+          <div class="top">
+            <div class="num" *ngIf="index<9 else noAddZero">0{{index + 1}}</div>
+            <ng-template #noAddZero><div class="num">{{index + 1}}</div></ng-template>
+            <div class="title" uiSref="jobDetail" [uiParams]="{ id: job.RecruitmentId }">{{job.Name}}</div>
+            <div class="hr"></div>
+          </div>
+          <div class="desc">
+            <span>Mô tả:</span> {{job.Description}}
+            <a uiSref="jobDetail" [uiParams]="{ id: job.RecruitmentId }">xem chi tiết</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>

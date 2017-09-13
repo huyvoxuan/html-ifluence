@@ -1,0 +1,160 @@
+<!--product-details-->
+<section class="details" #targetScroll>
+  <div class="container" #container>
+    <div class="row">
+      <!--details-left-->
+      <div class="col-md-8 col-sm-6" id="leftElement">
+        <h1 class="name">{{tour.Name}}</h1>
+        <app-ratings [ratingCount]="tour.RatingCount" [containerClass]="'mtop15'"></app-ratings>
+        <!--price-->
+        <div class="price" *ngIf="tour.DiscountPrice!=null && tour.DiscountPrice>0 else noDiscount"><span>{{tour.Price | currencyCustom}} {{tour.Currency.Symbol}}</span>{{tour.DiscountPrice | currencyCustom}} {{tour.Currency.Symbol}}</div>
+        <ng-template #noDiscount>
+          <div class="price price-nodiscount" *ngIf="tour.Price">{{tour.Price | currencyCustom}} {{tour.Currency.Symbol}}</div>
+        </ng-template>
+        <div class="divider mar15"></div>
+
+        <!--info-tour-->
+        <div class="info-tour">
+          <div class="row tour-code">
+            <div class="code">Mã tour</div>
+            <div class="info-book"><span *ngIf="tour.TourCode!==null">{{tour.TourCode}}</span></div>
+          </div>
+          <div class="row depature-place">
+            <div class="location">Nơi khởi hành</div>
+            <div class="info-book"><span *ngIf="tour.Departure!==null && tour.Departure.StateName!==null">{{tour.Departure.StateName}}</span></div>
+          </div>
+          <div class="row">
+            <div class="time">Thời gian</div>
+            <div class="info-book"><span *ngIf="tour.NumOfDays!==null">{{tour.NumOfDays}} ngày</span><span *ngIf="tour.NumOfNights!==null">{{tour.NumOfNights}} đêm</span></div>
+          </div>
+          <div class="row departure-date">
+            <div class="department">Ngày khởi hành</div>
+            <div class="info-book"><span *ngIf="departureDateStr">{{departureDateStr}}</span></div>
+          </div>
+          <div class="row">
+            <div class="vehicle">Phương tiện</div>
+            <div class="info-book">
+              <span *ngFor="let vehicle of tour.Vehicle">{{vehicle.Name}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="divider mar15"></div>
+
+        <!--description-->
+        <div class="desc">
+          <p *ngIf="tour.Description">{{tour.Description}}</p>
+        </div>
+        <div class="divider mar15"></div>
+
+        <!--itinerary-->
+        <div class="itinerary">
+          <h2>Hành Trình</h2>
+          <!-- loop item-->
+          <div class="item" *ngFor="let itinerary of tour.TourItineraryInfo">
+            <div class="title" *ngIf="itinerary.Name!==null">{{itinerary.Name}}</div>
+            <div class="rowa" *ngFor="let attraction of itinerary.TourItineraryDetails">
+              <div class="img-itinerary" (click)="itineraryModal.show(attraction.Attraction4Review.AttractionId)" data-toggle="modal" data-target="#itinerary-detail">
+                <img class="img-responsive" src="{{attraction.Attraction4Review.PhotoUrl}}" alt=""/>
+              </div>
+              <div class="info-itinerary">
+                <!--title, show modal-->
+                <div (click)="itineraryModal.show(attraction.Attraction4Review.AttractionId)" class="title-itinerary" data-toggle="modal" data-target="#itinerary-detail">{{attraction.Attraction4Review.Name}}</div>
+                <!--comment-->
+                <div class="count-comment">
+                  <app-ratings [ratingCount]="tour.RatingCount" [containerClass]="'vote-small'"></app-ratings>
+                  <div class="like">Lượt thích: <span>28</span></div>
+                  <div class="like comment">Bình luận: <span *ngIf="attraction.Attraction4Review && attraction.Attraction4Review.CommentCount">{{attraction.Attraction4Review.CommentCount}}</span></div>
+                </div>
+                <!--description-->
+                <div class="desc-itinerary">{{attraction.Attraction4Review.Description}}</div>
+
+                <!-- <button type="button" class="button-like"></button> -->
+                <app-like [isLiked]="attraction.Attraction4Review.IsLiked" [type]="'attraction'" [parentID]="attraction.Attraction4Review.AttractionId" ></app-like>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider mar15"></div>
+
+        <div class="include">
+          <!--Included-->
+          <h2>Giá Bao Gồm</h2>
+          <ul>
+            <li *ngIf="tour.Included">{{tour.Included}}</li>
+          </ul>
+          <div class="divider mar15"></div>
+
+          <!--Excluded-->
+          <h2>Giá Không Bao Gồm</h2>
+          <ul>
+            <li *ngIf="tour.Excluded">{{tour.Excluded}}</li>
+          </ul>
+          <div class="divider mar15"></div>
+
+          <!--other-->
+          <h2>Điều Kiện Đăng Ký Tour</h2>
+          <ul>
+            <li *ngIf="tour.OtherInformation">{{tour.OtherInformation}}</li>
+          </ul>
+        </div>
+
+        <!--comment-->
+        <div class="box-comment">
+          <!-- view comments -->
+          <div *ngIf="tour.TourId">
+            <app-comments [parentType]="'tour'" [parentID]="tour.TourId" [parentIDPost]="tour.TourDepartureScheduleId"></app-comments>
+          </div>
+        </div>
+      </div>
+
+      <!--slide-right-->
+      <sticky id="fixedElement" *ngIf="isFixedSlider else noFixedSlider" class="col-md-4 col-sm-6 slide-right" sticky-offset-top="20" sticky-offset-bottom="0">
+        <div #fixedSlider class="slide-right carousel" *ngIf="tour.PhotoUrls">
+          <app-carousel [photoUrls]="tour.PhotoUrls"></app-carousel>
+        </div>
+        <div class="slide-right sharing">
+          <div class="action">
+            <app-social-share [shareTitle]="tour.Name"></app-social-share>
+            <div class="book-tour">
+              <button type="button" class="btn bg-yellow button" (click)="gotoBooking(tour.TourDepartureScheduleId)">Đặt Tour</button>
+            </div>
+          </div>
+        </div>
+      </sticky>
+      <ng-template #noFixedSlider>
+        <div class="col-md-4 col-sm-6 slide-right carousel" *ngIf="tour.PhotoUrls">
+          <app-carousel [photoUrls]="tour.PhotoUrls"></app-carousel>
+        </div>
+        <div class="col-md-4 col-sm-6 slide-right sharing">
+          <div class="action">
+            <app-social-share [shareTitle]="tour.Name"></app-social-share>
+            <div class="book-tour">
+              <button type="button" class="btn bg-yellow button" (click)="gotoBooking(tour.TourDepartureScheduleId)">Đặt Tour</button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="divider"></div>
+    </div>
+  </div>
+</div>
+<!-- modal itinerary-->
+<app-tour-itinerary #itineraryModal></app-tour-itinerary>
+
+<!--relation tours-->
+<div class="suggest-tours" *ngIf="apiParams">
+  <app-tour-list
+    [apiParams]="apiParams"
+    [listTitle]="'Tour đến những điểm nổi bật khác'"
+    [isViewMore]="true"
+    [isViewCountTotal]="false">
+  </app-tour-list>
+</div>

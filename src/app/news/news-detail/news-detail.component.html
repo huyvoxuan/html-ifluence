@@ -1,0 +1,58 @@
+<!--event-details-->
+<section class="details" #targetScroll>
+  <div class="container">
+    <div class="row marbottom-breadcrumb">
+      <div class="col-md-8 col-sm-6"><div class="breadcrumb">Trang chủ / <span>Tin tức</span></div></div>
+      <div class="col-md-4 col-sm-6 text-right"><a class="back" (click)="back()">quay lại</a></div>
+    </div>
+    <div class="row">
+      <!--details-left-->
+      <div class="col-md-8 col-sm-6">
+        <h1 ><span *ngIf="news.Titile">{{news.Titile}}</span></h1>
+        <div *ngIf="news.RatingCount !== null">
+          <app-ratings [ratingCount]="news.RatingCount" [containerClass]="'mtop15'"></app-ratings>
+        </div>
+        <div class="date">Cập nhật: <span *ngIf="news.CreatedAt"> {{formatDate(news.CreatedAt)}}</span></div>
+        <div class="divider mar15"></div>
+
+        <!--description-->
+        <div class="desc"><p *ngIf="news.Description">{{news.Description}}</p>
+        </div>
+
+        <!--box-comment-->
+        <div class="box-comment" *ngIf="news.NewsId">
+          <app-comments [parentType]="'news'" [parentID]="news.NewsId" ></app-comments>
+        </div>
+      </div>
+      <!--carousel-->
+        <div class="col-md-4 col-sm-6 slide-right">
+          <div class="slide-right" *ngIf="news.PhotoInfos && news.PhotoInfos.length>0">
+            <app-carousel [photoUrls]="news.PhotoInfos"></app-carousel>
+          </div>
+          <!-- social haring -->
+          <div class="slide-right">
+            <div class="action">
+              <app-social-share [shareTitle]="news.Titile"></app-social-share>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="divider"></div>
+    </div>
+  </div>
+</div>
+
+<!--relation tours-->
+<!-- <app-tour-list
+  [apiParams]="apiParams"
+  [listTitle]="'Những Tour Tham Gia Sự Kiện'"
+  [isViewMore]="true"
+  [isViewCountTotal]="false">
+</app-tour-list>
+ -->

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-service4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="06-dichvu" transform="translate(-824.000000, -212.000000)" stroke="#FFFFFF">
+            <g id="Group-2" transform="translate(391.000000, 189.000000)">
+                <g id="4" transform="translate(393.000000, 0.000000)">
+                    <g id="ic_offer" transform="translate(39.000000, 22.000000)">
+                        <g id="offer" transform="translate(12.000000, 12.000000) rotate(-45.000000) translate(-12.000000, -12.000000) translate(3.000000, 0.000000)">
+                            <path d="M1.4157564e-12,7.5 L9,1.36601841e-12 L18,7.5 L18,24 L1.4157564e-12,24 L1.4157564e-12,7.5 Z" id="Path-5" stroke-width="2"></path>
+                            <circle id="Oval" stroke-width="2" fill="#FFFFFF" cx="9" cy="9" r="1.5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

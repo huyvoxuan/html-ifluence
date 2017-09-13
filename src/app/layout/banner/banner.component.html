@@ -1,0 +1,48 @@
+<header>
+  <div class="container">
+    <!-- sub-nav -->
+    <div class="row sub-nav">
+      <div class="col-md-7 col-sm-6 col-xs-12 ">
+        <a class="logo" uiSref="home" uiSrefActive="active">
+          <img src="assets/img/logo.png" alt="Antin Travel - Nơi kiến tạo những hành trình hạnh phúc">
+        </a>
+      </div>
+      <div class="col-md-5 col-sm-6 col-xs-12">
+        <ul class="social">
+          <li>
+            <div class="phone">{{phoneNumber}}</div>
+          </li>
+          <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/antintravel" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+          <li><a class="language vn" (click)="changeLanguage('vn')"><img src="assets/img/flagVietnam.png" /></a></li>
+          <li><a class="language en" (click)="changeLanguage('en')"><img src="assets/img/flagUS.png" /></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- header title -->
+    <div class="row" *ngIf="bannerConf.isSlogan">
+      <div class="col-sm-12">
+        <div class="header-content">
+          <div class="header-content-inner">
+            <h1>Welcome to Antintravel</h1>
+            <h2>Nơi kiến tạo những hành trình hạnh phúc</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-block" *ngIf="bannerConf.isSearch">
+      <app-tour-search></app-tour-search>
+    </div>
+    <!--headerImg-->
+    <div class="headerImg" *ngIf="bannerConf.bannerImg else bannerDefault">
+      <img [src]="bannerConf.bannerImg" alt="" class="">
+    </div>
+    <ng-template #bannerDefault>
+      <div class="headerImg">
+      <img src="'assets/img/header/headerImg.png'" alt="" class="">
+    </div>
+    </ng-template>
+  </div>
+</header>

@@ -1,0 +1,4 @@
+<div class="dp-popup">
+  <!-- <div class="icon-input" *ngIf="icon"><img src="assets/img/search-calendar.svg" alt=""></div> -->
+ <input placeholder="{{placeHolder | translate}}" class="form-control" type="text" name="daterangeInput" daterangepicker (selected)="selectedDate($event)" (cancelDaterangepicker)="calendarCanceled($event)" />
+</div>

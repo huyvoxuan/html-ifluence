@@ -1,0 +1,81 @@
+<div class="row member-update">
+    <div class="col-md-3 col-sm-6 col-xs-12 relative">
+        <div class="avatar">
+            <img class="img-avatar" *ngIf="user.PhotoUrl && !avatarObj.src else newImg" src="{{user.PhotoUrl}}" alt="">
+            <ng-template #newImg><img class="img-avatar" *ngIf="avatarObj.src" [attr.src]="domSanitizer.bypassSecurityTrustUrl(avatarObj.src)" alt=""></ng-template>
+        </div>
+        <div class="ic-edit-avatar">
+            <img src="assets/img/ic-edit-avatar.svg" alt="" on-click="chooseFile()">
+            <input #inputFile type="file" accept='image/*' #fileInput on-change="fileChangeEvent($event)" class="hidden">
+        </div>
+
+        <div class="text-center">
+            <a href="#" data-toggle="modal" data-target="#modal-changePass">Đổi mật khẩu</a>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <form name="userForm" id="userForm" novalidate on-submit="updateUserInfo()">
+
+            <div class="row">
+                <div class="col-md-6 has-float-label">
+                    <input class="form-control" id="first" name="lastName" type="text" placeholder=" " [(ngModel)]="user.LastName"/>
+                    <label for="first">Họ</label>
+                </div>
+                <div class="col-md-6 has-float-label">
+                    <input class="form-control" id="name" placeholder=" " type="text" name="firstName" [(ngModel)]="user.FirstName">
+                    <label for="name">Tên</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 has-float-label">
+                    <input class="form-control" placeholder=" " id="address" name="address" [(ngModel)]="user.Address">
+                    <label for="address">Địa chỉ</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 has-float-label">
+                    <input class="form-control" placeholder=" " id="userName" name="userName" [(ngModel)]="user.UserName">
+                    <label for="username">Tài khoản đăng nhập</label>
+                </div>
+                <div class="col-md-6 has-float-label">
+                    <input class="form-control" placeholder=" " id="email" name="email" [(ngModel)]="user.Email">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="submit" class="btn bg-primary">Lưu</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal-changePass -->
+<div class="modal fade" id="modal-changePass" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Đổi Mật Khẩu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeModal></button>
+      </div>
+      <div class="modal-body mar-center">
+        <form name="updatePassword" on-submit="updatePassword()">
+          <div class="form-group relative">
+            <div class="icon"><img src="assets/img/ic-lock.svg" alt=""></div>
+            <input type="password" class="form-control" placeholder="Mật khẩu cũ" (input)="passwordObj.oldPassword=$event.target.value">
+          </div>
+          <div class="form-group relative">
+            <div class="icon"><img src="assets/img/ic-lock.svg" alt=""></div>
+            <input type="password" class="form-control" placeholder="Mật khẩu mới" (input)="passwordObj.newPassword=$event.target.value">
+          </div>
+          <div class="form-group relative">
+            <div class="icon"><img src="assets/img/ic-lock.svg" alt=""></div>
+            <input type="password" class="form-control" placeholder="Xác nhận mật khẩu" (input)="passwordObj.confirmPassword=$event.target.value">
+          </div>
+          <button type="submit" class="btn bg-primary">Lưu</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

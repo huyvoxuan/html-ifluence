@@ -1,0 +1,16 @@
+<!--event-->
+
+<section class="event">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"><h1>{{'I18n.event.listTitle.prefix' | translate}} <span>{{'I18n.event.listTitle.surfix' | translate}}</span></h1></div>
+    </div>
+    <div class="row">
+      <app-event-list
+        [isloadMore]="true"
+        [isViewTitle]="true"
+        [pageSize]="8"
+      ></app-event-list>
+    </div>
+  </div>
+</section>

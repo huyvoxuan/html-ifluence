@@ -1,0 +1,11 @@
+<div class="dp-popup">
+  <div class="icon-input" *ngIf="icon"><img src="assets/img/search-calendar.svg" alt=""></div>
+
+  <input *ngIf="dateFormat=='dd/MM/yyyy'" class="form-control" placeholder="{{placeHolder}}" type="text" value="{{initDate | date:'dd/MM/yyyy'}}" (focus)="onFocus()" (blur)="onBlur($event)">
+
+  <input *ngIf="dateFormat=='MM/dd/yyyy'" class="form-control" placeholder="{{placeHolder}}" type="text" value="{{initDate | date:'MM/dd/yyyy'}}" (focus)="onFocus()" (blur)="onBlur($event)">
+
+  <div #datepickerElement class="date-picker-container" [ngClass]="{'hidden': !showDatePicker, '': showDatePicker}">
+    <datepicker [(ngModel)]="initDate" [showWeeks]="false" (ngModelChange)="hideDatePicker()"></datepicker>
+  </div>
+</div>

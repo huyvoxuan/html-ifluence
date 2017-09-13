@@ -1,0 +1,32 @@
+<!-- new comment -->
+<div class="header-cmt">
+  <div class="pull-left avatar {{avatarClass}}">
+    <span *ngIf="reviewStandFor">{{reviewStandFor}}</span>
+  </div>
+  <div class="type-cmt">
+    <form #f="ngForm" #commentForm>
+      <div class="click-vote">
+        <span>Đánh giá</span>
+        <app-ratings [ratingCount]="rating" [containerClass]="'vote-small'" [isEventBinding]="true" [(ratingValue)]="rating"></app-ratings>
+      </div>
+      <div class="relative">
+        <input class="form-control" placeholder="Viết bình luận" [(ngModel)]="message" name="message">
+        <img class="icon-send" src="assets/img/sendOvan.svg" alt="icon-send" (click)="createComment()"/>
+        <input #inputFile type="file" multiple accept='image/*' #fileInput (change)="fileChangeEvent($event)" class="hidden">
+        <img class="icon-camera" src="assets/img/ic-camera.svg" alt="" (click)="chooseFile()"/>
+      </div>
+      <div class="add-img" *ngFor="let image of uploadFiles; let index = index;">
+        <div class="img">
+          <img class="img-responsive" [attr.src]="domSanitizer.bypassSecurityTrustUrl(image.src)" alt="">
+          <div class="remove" on-click="removeFile(index)"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- view comments -->
+<div class="body comment-list">
+  <div class="row comment-item" *ngFor="let comment of comments">
+    <app-comment-item [comment]="comment"></app-comment-item>
+  </div>
+</div>

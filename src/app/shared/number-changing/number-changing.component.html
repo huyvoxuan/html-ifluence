@@ -1,0 +1,9 @@
+<div class="book-info">
+  <div class="col-md-5 col-sm-12 title">{{title}} <span *ngIf="subTitle">{{subTitle}}</span></div>
+  <div class="col-md-2 col-sm-12 count">
+    <div class="button"><img src="assets/img/ic--.svg" alt="" (click)="decrement()"></div>
+    <div class="num">{{count}}</div>
+    <div class="button pull-right"><img src="assets/img/ic-+.svg" alt="" (click)="increment()"></div>
+  </div>
+  <div class="col-md-5 col-sm-12 price"><span>{{total | currencyCustom}}</span>đ</div>
+</div>

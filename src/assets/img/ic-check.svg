@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-check</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16" rx="3"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05-book-tour" transform="translate(-339.000000, -699.000000)">
+            <g id="ic-check" transform="translate(339.000000, 699.000000)">
+                <g id="Base">
+                    <use fill="#68A236" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#68A236" stroke-width="1" x="0.5" y="0.5" width="15" height="15" rx="3"></rect>
+                </g>
+                <path d="M12.3205,5.25134817 C12.6556429,5.58647905 12.6556429,6.12817399 12.3205,6.46330488 L8.03478571,10.7488661 C7.86764286,10.916003 7.64821429,11 7.42878571,11 C7.20935714,11 6.98992857,10.916003 6.82278571,10.7488661 L4.25135714,8.17752937 C3.91621429,7.84239849 3.91621429,7.30070355 4.25135714,6.96557266 C4.5865,6.63044177 5.12821429,6.63044177 5.46335714,6.96557266 L7.42878571,8.93093104 L11.1085,5.25134817 C11.4436429,4.91621728 11.9853571,4.91621728 12.3205,5.25134817 L12.3205,5.25134817 Z" id="Path" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

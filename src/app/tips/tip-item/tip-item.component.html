@@ -1,0 +1,19 @@
+<div class="col-md-3 col-sm-3">
+  <div class="event-img" uiSref="tipDetail" [uiParams]="{ id: tip.TipId }">
+    <img class="img-responsive" *ngIf="tip.PhotoUrl!=null else imgDefault" src="{{tip.PhotoUrl}}" alt="">
+    <ng-template #imgDefault>
+      <img class="img-responsive" src="assets/img/tour/tour18.png" alt="">
+    </ng-template>
+  </div>
+</div>
+<div class="col-md-3 col-sm-3">
+  <div class="box-content">
+    <a uiSref="tipDetail" [uiParams]="{ id: tip.TipId }" class="title"><span *ngIf="tip.Name">{{tip.Name}}</span></a>
+    <div class="cmt">
+        <div class="like">Lượt thích: <span *ngIf="tip.LikeCount!==null">{{tip.LikeCount}}</span></div>
+        <div class="like">Bình luận: <span *ngIf="tip.CommentCount!==null">{{tip.CommentCount}}</span></div>
+    </div>
+    <div class="decr"><span *ngIf="tip.Description">{{tip.Description}}</span></div>
+    <a class="detail" uiSref="tipDetail" [uiParams]="{ id: tip.TipId }">Xem chi tiết</a>
+  </div>
+</div>

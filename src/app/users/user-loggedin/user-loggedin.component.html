@@ -1,0 +1,20 @@
+
+<div class="navbar-brand member" href="#page-top">
+
+  <div class="dropdown">
+    <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+
+      <div class="avatar">
+        <img *ngIf="userInfo.avatar else noAvatar" class="img-responsive" src="{{userInfo.avatar}}" alt=""/>
+        <ng-template #noAvatar><span>{{userInfo['nameStandfor']}}</span></ng-template>
+      </div>
+      <div class="arrow"></div>
+    </a>
+    <ul class="dropdown-menu dropdown-user">
+      <li><a uiSref="user.voucher" uiSrefActive="active">Khuyến Mãi</a></li>
+      <li><a uiSref="user.tour" uiSrefActive="active">Tour đăng ký</a></li>
+      <li><a uiSref="user.account" uiSrefActive="active">Cập nhật tài khoản</a></li>
+      <li><a class="logout" (click)="logout()">Đăng xuất</a></li>
+    </ul>
+  </div>
+</div>

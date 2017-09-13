@@ -1,0 +1,16 @@
+
+<div class="row">
+  <div class="tips-list" *ngFor="let tip of tips">
+    <app-tip-item [tip]="tip"></app-tip-item>
+</div>
+
+<div class="row hidden" *ngIf="pageCount">
+  <div class="col-md-12">
+    <app-paging [pageCount]="pageCount" (output)="getItems($event)"></app-paging>
+  </div>
+</div>
+
+<div *ngIf=" tips && tips.length && pageCount > 1 " class="row view-more ">
+    <div class="col-md-offset-4 col-md-4" on-click="loadMore()"><button type="button" class="btn bg-primary  mar30">Xem thêm</button></div>
+</div>
+

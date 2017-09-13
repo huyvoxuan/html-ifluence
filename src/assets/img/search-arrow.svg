@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="17px" viewBox="0 0 16 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>search-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8">
+        <g id="groupSearch" transform="translate(-251.000000, -27.000000)" fill="#FFFFFF">
+            <g id="search-arrow" transform="translate(251.000000, 27.000000)">
+                <polygon id="Fill-252" transform="translate(9.207000, 11.707000) rotate(90.000000) translate(-9.207000, -11.707000) " points="8.207 9.329 8.207 17.914 10.207 17.914 10.207 9.329 12.5 11.621 13.914 10.207 9.207 5.5 4.5 10.207 5.914 11.621"></polygon>
+                <polygon id="Fill-252" transform="translate(6.293000, 5.207000) rotate(-90.000000) translate(-6.293000, -5.207000) " points="5.293 2.829 5.293 11.414 7.293 11.414 7.293 2.829 9.586 5.121 11 3.707 6.293 -1 1.586 3.707 3 5.121"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

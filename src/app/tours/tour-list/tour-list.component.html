@@ -1,0 +1,38 @@
+<section class="list-tour">
+  <div class="container">
+    <div class="row" *ngIf="tourList">
+      <div class="col-md-8 col-sm-8 col-xs-8">
+        <h1>{{listTitle | translate}}</h1>
+      </div>
+      <!-- total tours -->
+      <div *ngIf="isViewCountTotal && tourCount<=1" class="col-md-4 col-sm-4 col-xs-4 text-right result">
+      <span>{{tourCount}}</span> tour</div>
+      <div *ngIf="isViewCountTotal && tourCount>1" class="col-md-4 col-sm-4 col-xs-4 text-right result">
+      <span>{{tourCount}}</span> tours</div>
+      <!-- view more -->
+      <div class="col-md-4 col-sm-4 col-xs-4 text-right" *ngIf="isHome && tourCount>4">
+        <a (click)="listPage(listType)" class="more">{{'I18n.common.viewmore' | translate}}</a>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 col-sm-6" *ngFor="let tour of tourList; let index=index">
+        <app-tour-item [tour]="tour"></app-tour-item>
+      </div>
+    </div>
+    <div class="row hidden" *ngIf="pageCount && isPaging">
+      <div class="col-md-12">
+        <app-paging [pageCount]="pageCount" (output)="getItems($event)"></app-paging>
+      </div>
+    </div>
+    <div class="row" *ngIf="isHome">
+      <div class="col-md-12"><div class="divider"></div></div>
+    </div>
+    <div class="row view-more" *ngIf=" isViewMoreBottom && tourCount && pageCount > 1 ">
+      <div class="col-md-offset-4 col-md-4">
+        <button type="button" class="btn bg-primary mar30" (click)="loadMore()">{{'I18n.common.viewmore' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="22px" viewBox="0 0 14 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-detail-location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-details-page" transform="translate(-71.000000, -480.000000)" fill="#000000">
+            <path d="M75.0833333,488.150765 C75.0833333,486.446059 76.39,485.062529 78,485.062529 C79.61,485.062529 80.9166667,486.446059 80.9166667,488.150765 C80.9166667,489.855471 79.61,491.239 78,491.239 C76.39,491.239 75.0833333,489.855471 75.0833333,488.150765 M85,488.150765 C85,484.057 81.8651667,480.739 78,480.739 C74.1336667,480.739 71,484.057 71,488.150765 C71,493.091941 78,501.739 78,501.739 C78,501.739 85,493.091941 85,488.150765" id="ic-detail-location"></path>
+        </g>
+    </g>
+</svg>

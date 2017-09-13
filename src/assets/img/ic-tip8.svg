@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="27px" viewBox="0 0 30 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-tip8</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="08-cam-nangDL" transform="translate(-971.000000, -325.000000)" fill="#FFFFFF">
+            <g id="Group-2" transform="translate(260.000000, 304.000000)">
+                <g id="7" transform="translate(691.000000, 0.000000)">
+                    <g id="ic-tip8" transform="translate(20.000000, 21.000000)">
+                        <path d="M22.7967,24.0015 L7.2027,24.0015 L4.8702,13.5015 L25.1307,13.5015 L22.7967,24.0015 Z M29.9997,10.5015 L24.8697,10.5015 L19.3017,0.756 L16.6977,2.2455 L21.4152,10.5015 L8.5842,10.5015 L13.3017,2.2455 L10.6977,0.756 L5.1297,10.5015 L-0.0003,10.5015 L-0.0003,13.5015 L1.7967,13.5015 L4.5357,25.827 C4.6887,26.5125 5.2962,27.0015 5.9997,27.0015 L23.9997,27.0015 C24.7032,27.0015 25.3122,26.5125 25.4637,25.827 L28.2027,13.5015 L29.9997,13.5015 L29.9997,10.5015 Z"></path>
+                        <polygon id="Fill-543" points="16.5 15.0015 13.5 15.0015 13.5 22.5015 16.5 22.5015"></polygon>
+                        <polygon id="Fill-544" points="21 15.0015 18 15.0015 18 22.5015 21 22.5015"></polygon>
+                        <polygon id="Fill-545" points="12 15.0015 9 15.0015 9 22.5015 12 22.5015"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

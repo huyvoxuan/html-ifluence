@@ -1,0 +1,176 @@
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12 overflow">
+
+    <div class="table-div">
+      <div class="thead">
+        <div class="th w10">Số người đk</div>
+        <div class="th w15">Ngày đăng ký</div>
+        <div class="th w15">Loại thanh toán</div>
+        <div class="th w20">Tổng tiền</div>
+        <div class="th w15">Còn nợ</div>
+        <div class="th w15">Trạng thái</div>
+        <div class="th w10">Thao tác</div>
+      </div>
+      <div class="tbody">
+        <div class="item" *ngFor="let tour of tours">
+          <div class="name">{{tour.Name}}</div>
+          <div class="wrap-td" *ngFor="let registrationInfo of tour.TourRegistrationInfos">
+            <div class="td w10">{{registrationInfo.AdultCount + registrationInfo.ChildrenCount +
+              registrationInfo.InfantCount}}
+            </div>
+            <div class="td w15" *ngIf="registrationInfo.CreatedAt"> {{formatDate(registrationInfo.CreatedAt)}}</div>
+            <div class="td w15" *ngIf="registrationInfo.PaymentTypeId">Tiền mặt</div>
+            <div class="td w20" *ngIf="registrationInfo.Amount">{{registrationInfo.Amount | currencyCustom}}</div>
+            <div class="td w15">12,000,000</div>
+            <div class="td w15" *ngIf="registrationInfo.Status">{{registrationInfo.Status.Name}}</div>
+            <div class="td w10">
+              <div class="ic-edit" data-toggle="modal" data-target="#modal-tour-member"
+                   on-click="editTourMember(registrationInfo.TourRegistrationId)"></div>
+              <div class="ic-cancel" on-click="cancelTour(registrationInfo.TourRegistrationId)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal-Update Tour Memeber Info -->
+<div class="modal fade" id="modal-tour-member" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Members</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeModal></button>
+      </div>
+      <div class="modal-body mar-center">
+        <form name="updateTourMember" on-submit="updateTourMember()">
+          <div class="" *ngFor="let member of tourMembers">
+            <!--Age-->
+            <div class="form-group">
+              <select class="form-control" name="ageType" [value]="member.Age"
+                      (input)="member.Age=$event.target.value">
+                <option value="null">Người tham gia</option>
+                <option value="1">Người lớn</option>
+                <option value="2">Trẻ em</option>
+                <option value="3" selected="true">Trẻ nhỏ</option>
+              </select>
+            </div>
+            <!--Họ-->
+            <div class="form-group">
+              <input class="form-control" placeholder="Họ" name="lastName" [value]="member.LastName"
+                     (input)="member.LastName=$event.target.value">
+            </div>
+            <!--Tên-->
+            <div class="form-group">
+              <input class="form-control" placeholder="Tên" name="firstName" [value]="member.FirstName"
+                     (input)="member.FirstName=$event.target.value">
+            </div>
+            <!--gender-->
+            <div class="form-group">
+              <select class="form-control" name="gender">
+                <option value="null" selected="selected">Giới tính</option>
+                <option value="1">Nam</option>
+                <option value="2">Nữ</option>
+                <option value="3">Khác</option>
+              </select>
+            </div>
+            <!--country-->
+            <div class="form-group">
+              <select class="form-control" name="country">
+                <option value="null" selected="selected">Quốc tịch</option>
+                <option value="{{country.CountryId}}" *ngFor="let country of countries">{{country.Name}}</option>
+              </select>
+            </div>
+            <!--Passport-->
+            <div class="form-group">
+              <input class="form-control" placeholder="Passport" name="passport">
+            </div>
+            <!--phone-->
+            <div class="form-group">
+              <input class="form-control" placeholder="Số điện thoại" name="phone">
+            </div>
+            <!--Email-->
+            <div class="form-group">
+              <input class="form-control" placeholder="Email" name="email">
+            </div>
+            <!---->
+          </div>
+          <button type="submit" class="btn bg-primary">Lưu</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!-- <tr *ngFor="let tour of tours">
+  <div *ngFor="let member of tourRegister.TourRegistrationMembers; let index=index">
+            <div class="book-list" >
+              <div class="col-md-6">
+                <select class="form-control" name="ageType"[value]="member.Age" (input)="member.Age=$event.target.value">
+                  <option value="null">Người tham gia</option>
+                  <option value="1">Người lớn</option>
+                  <option value="2">Trẻ em</option>
+                  <option value="3" selected="true">Trẻ nhỏ</option>
+                </select>
+              </div>
+              <div class="icon-right icon-right-tablet">
+                <button type="button" class="" (click)="removeMember(index)"><img src="assets/img/ic-remove.svg" alt="removeMember"></button>
+              </div>
+            </div>
+
+            <div class="book-people name">
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Họ" name="lastName" [value]="member.LastName" (input)="member.LastName=$event.target.value"required>
+              </div>
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Tên" name="firstName" [value]="member.FirstName" (input)="member.FirstName=$event.target.value" required>
+              </div>
+            </div>
+
+            <div class="book-people">
+              <div class="col-md-6">
+                <app-input-date [dateFormat]="'dd/MM/yyyy'" [icon]="true" [placeHolder]="'Ngày sinh'" (output)="member.Birthday=$event" ></app-input-date>
+              </div>
+              <div class="col-md-6">
+                <select class="form-control" [value]="member.Sex" (input)="member.Sex=$event.target.value" name="gender">
+                  <option value="null" selected="selected">Giới tính</option>
+                  <option value="1">Nam</option>
+                  <option value="2">Nữ</option>
+                  <option value="3">Khác</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="book-people">
+              <div class="col-md-6">
+                <select class="form-control" [value]="member.CountryId" (input)="member.CountryId=$event.target.value" name="country">
+                  <option value="null" selected="selected">Quốc tịch</option>
+                  <option value="{{country.CountryId}}" *ngFor="let country of countries">{{country.Name}}</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Passport" name="passport" [value]="member.Passport" (input)="member.Passport=$event.target.value">
+              </div>
+            </div>
+
+            <div class="book-people">
+              <div class="col-md-6">
+                <app-input-date [dateFormat]="'dd/MM/yyyy'" [icon]="true" [placeHolder]="'Ngày cấp'" (output)="member.IssueDate=$event" ></app-input-date>
+              </div>
+              <div class="col-md-6">
+                <app-input-date [dateFormat]="'dd/MM/yyyy'" [icon]="true" [placeHolder]="'Ngày hết hạn'" (output)="member.ExpiryDate=$event" ></app-input-date>
+              </div>
+            </div>
+
+            <div class="book-people">
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Số điện thoại" name ="phone" [value]="member.PhoneNumber" (input)="member.PhoneNumber=$event.target.value">
+              </div>
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Email" name="email" [value]="member.Email" (input)="member.Email=$event.target.value">
+              </div>
+            </div>
+          </div>
+
+        -->

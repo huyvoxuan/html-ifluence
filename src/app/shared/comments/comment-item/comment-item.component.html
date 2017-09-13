@@ -1,0 +1,18 @@
+<div class="name-avatar">
+  <div class="avatar {{avatarClass}}">
+    <img *ngIf="comment.MemberAvatar else noAvatar" class="img-responsive" src="{{comment.MemberAvatar}}" alt=""/>
+    <ng-template #noAvatar><span>{{standforName}}</span></ng-template>
+  </div>
+  <div class="name">{{comment.MemberName}}</div>
+</div>
+<div class="post-cmt">
+  <app-ratings [ratingCount]="comment.Rating" [containerClass]="'vote-small'"></app-ratings>
+  <span *ngIf="commentTime.hour"> Cách đây {{commentTime.value}} giờ</span>
+  <span *ngIf="commentTime.minute"> Cách đây {{commentTime.value}} phút</span>
+  <span *ngIf="commentTime.day"> {{commentTime.value}} ngày trước</span>
+  <p>{{comment.Message}}</p>
+
+  <div *ngFor="let photo of commentPhotos" class="comment-images">
+    <img class="img-responsive" src="{{photo.PhotoUrl}}">
+  </div>
+</div>

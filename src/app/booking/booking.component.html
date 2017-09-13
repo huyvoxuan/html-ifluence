@@ -1,0 +1,224 @@
+<!--product-details-->
+<section class="bookTour" #targetScroll>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"><h1>Đặt Tour</h1></div>
+    </div>
+    <div class="row" *ngIf="tour">
+      <!--details-left-->
+      <div class="col-md-7 col-sm-5">
+        <form class="form-booktour" #f="ngForm" (ngSubmit)="register()">
+          <div class="book-header">
+            <div class="title">Thông tin người đăng ký</div>
+            <div class="icon-right hidden">
+              <button type="button"><img src="assets/img/ic-add.svg" alt=""></button>
+            </div>
+          </div>
+          <div *ngIf="tour && tour.Price">
+            <app-number-changing [title]="'Số Người Lớn'" [subTitle]="" [unit]="tourPrice" [count]="tourRegister.AdultCount" [minValue]="1" (output)="tourRegister.AdultCount=$event" (output)="countMembers()"></app-number-changing>
+            <app-number-changing [title]="'Trẻ em'" [subTitle]="'(từ 2 đến dưới 12 tuổi)'" [unit]="tour.ChildrenPrice" [count]="tourRegister.ChildrenCount" (output)="tourRegister.ChildrenCount=$event" (output)="countMembers()"></app-number-changing>
+             <app-number-changing [title]="'Trẻ nhỏ'" [subTitle]="'(dưới 2 tuổi)'" [unit]="tour.InfantPrice" [count]="tourRegister.InfantCount" (output)="tourRegister.InfantCount=$event" (output)="countMembers()"></app-number-changing>
+          </div>
+
+          <!-- voucher -->
+          <div class="book-info voucher">
+            <div class="col-md-5"><input [(ngModel)]="tourRegister.PromotionCode" (ngModelChange)="getVoucherValidate()" name="promotionCode" class="form-control" placeholder="Nhập mã khuyến mãi"></div>
+            <div class="col-md-3">
+              <img class="img" src="assets/img/ic-check.svg" alt="" [ngClass]="{'hidden': !voucherValue, '': voucherValue}">
+            </div>
+            <div class="col-md-5 price"><span>{{voucherValue}}đ</span></div>
+          </div>
+
+          <!-- payment type -->
+          <div class="book-header">
+            <div class="title">Hình thức thanh toán</div>
+          </div>
+          <div class="book-payment">
+            <div class="item">
+              <div class="money1" [ngClass]="{'active': tourRegister.PaymentTypeId==1}" (click)="changePaymentType(inputCash)">
+              </div>
+              <div class="text">Tiền mặt</div>
+              <input #inputCash type="radio" class="hidden" [(ngModel)]="tourRegister.PaymentTypeId"  name="paymentType" value="1">
+            </div>
+
+            <div class="item">
+              <div class="money2" [ngClass]="{'active': tourRegister.PaymentTypeId==2}" (click)="changePaymentType(inputTransfer)">
+              </div>
+              <div class="text">Chuyển khoản</div>
+              <input #inputTransfer type="radio" class="hidden" [(ngModel)]="tourRegister.PaymentTypeId"  name="paymentType" value="2">
+            </div>
+
+            <div class="item">
+              <div class="money3" [ngClass]="{'active': tourRegister.PaymentTypeId==3}" (click)="changePaymentType(inputATM)">
+              </div>
+              <div class="text">Thẻ nội địa</div>
+              <input #inputATM type="radio" class="hidden" [(ngModel)]="tourRegister.PaymentTypeId"  name="paymentType" value="3">
+            </div>
+
+            <div class="item">
+              <div class="money4" [ngClass]="{'active': tourRegister.PaymentTypeId==4}" (click)="changePaymentType(inputCredit)">
+              </div>
+              <div class="text">Thẻ visa</div>
+              <input #inputCredit type="radio" class="hidden" [(ngModel)]="tourRegister.PaymentTypeId"  name="paymentType" value="4">
+            </div>
+          </div>
+
+          <!-- tour members -->
+          <div class="book-header">
+            <div class="title">Danh sách người tham gia</div>
+            <div class="icon-right">
+              <button type="button" (click)="addMember()"><img src="assets/img/ic-add.svg" alt=""></button>
+            </div>
+          </div>
+          <div *ngFor="let member of tourRegister.TourRegistrationMembers; let index=index">
+            <div class="book-list" >
+              <div class="col-md-6">
+                <select class="form-control" name="ageType" [value]="member.Age" (input)="member.Age=$event.target.value">
+                  <option value="null">Người tham gia</option>
+                  <option value="1">Người lớn</option>
+                  <option value="2">Trẻ em</option>
+                  <option value="3" selected="true">Trẻ nhỏ</option>
+                </select>
+              </div>
+              <div class="icon-right icon-right-tablet">
+                <button type="button" class="" (click)="removeMember(index)"><img src="assets/img/ic-remove.svg" alt="removeMember"></button>
+              </div>
+            </div>
+
+            <div class="book-people name">
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Họ" name="lastName" [value]="member.LastName" (input)="member.LastName=$event.target.value"required>
+              </div>
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Tên" name="firstName" [value]="member.FirstName" (input)="member.FirstName=$event.target.value" required>
+              </div>
+            </div>
+
+            <div class="book-people">
+              <div class="col-md-6">
+                <app-input-date [dateFormat]="'dd/MM/yyyy'" [icon]="true" [placeHolder]="'Ngày sinh'" (output)="member.Birthday=$event" ></app-input-date>
+              </div>
+              <div class="col-md-6">
+                <select class="form-control" [value]="member.Sex" (input)="member.Sex=$event.target.value" name="gender">
+                  <option value="null" selected="selected" >Giới tính</option>
+                  <option value="1">Nam</option>
+                  <option value="2">Nữ</option>
+                  <option value="3">Khác</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="book-people">
+              <div class="col-md-6">
+                <select class="form-control" [value]="member.CountryId" (input)="member.CountryId=$event.target.value" name="country">
+                  <option value="null" selected="selected">Quốc tịch</option>
+                  <option value="{{country.CountryId}}" *ngFor="let country of countries">{{country.Name}}</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Passport" name="passport" [value]="member.Passport" (input)="member.Passport=$event.target.value">
+              </div>
+            </div>
+
+            <div class="book-people">
+              <div class="col-md-6">
+                <app-input-date [dateFormat]="'dd/MM/yyyy'" [icon]="true" [placeHolder]="'Ngày cấp'" (output)="member.IssueDate=$event" ></app-input-date>
+              </div>
+              <div class="col-md-6">
+                <app-input-date [dateFormat]="'dd/MM/yyyy'" [icon]="true" [placeHolder]="'Ngày hết hạn'" (output)="member.ExpiryDate=$event" ></app-input-date>
+              </div>
+            </div>
+
+            <div class="book-people">
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Số điện thoại" name ="phone" [value]="member.PhoneNumber" (input)="member.PhoneNumber=$event.target.value">
+              </div>
+              <div class="col-md-6">
+                <input class="form-control" placeholder="Email" name="email" [value]="member.Email" (input)="member.Email=$event.target.value">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12 mt20">
+            <!-- <button type="button" class="btn bg-primary" (click)="register()">hoàn tất</button> -->
+            <button type="submit" class="btn bg-primary mar30">hoàn tất</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- tour overview -->
+      <div class="col-md-5 col-sm-7 col-xs-12">
+        <div class="rightBookTour">
+          <h2><span *ngIf="tour && tour.Name">{{tour.Name}}</span></h2>
+          <div class="body">
+            <div class="row">
+              <div class="item clearfix">
+                <label>Mã Tour</label>
+                <div class="textResult"><span *ngIf="tour && tour.TourCode">{{tour.TourCode}}</span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="item">
+                <label>Nơi khởi hành</label>
+                <div class="textResult"><span *ngIf="tour && tour.Departure">{{tour.Departure.StateName}}</span></div>
+              </div>
+              <div class="itempt clearfix">
+                <label>Thời gian</label>
+                <div class="textResult"><span *ngIf="tour && tour.NumOfDays">{{tour.NumOfDays}} ngày</span><span *ngIf="tour && tour.NumOfNights"> {{tour.NumOfNights}} đêm</span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="item">
+                <label>Ngày khởi hành</label>
+                <div class="textResult">04/05/2017</div>
+              </div>
+              <div class="itempt clearfix">
+                <label>Phương tiện</label>
+                <div class="textResult">
+                  <span *ngFor="let vehicle of tour.Vehicles">{{vehicle.Name}} </span>
+                </div>
+              </div>
+            </div>
+            <div class="row countBook">
+              <div class="item">
+                <label>Số người đăng ký</label>
+                <div class="textResult"><span>{{tourRegister.AdultCount}} </span>Người lớn</div>
+                <div class="textResult" *ngIf="tourRegister.ChildrenCount>0"><span>{{tourRegister.ChildrenCount}} </span>Trẻ em</div>
+                <div class="textResult" *ngIf="tourRegister.InfantCount>0"><span>{{tourRegister.InfantCount}} </span>Em bé</div>
+              </div>
+              <div class="itemRfull clearfix">
+                <label>Hình thức thanh toán</label>
+                <div class="textResult">
+                <span *ngIf="tourRegister.PaymentTypeId==1">Tiền Mặt</span>
+                <span *ngIf="tourRegister.PaymentTypeId==2">Chuyển Khoản</span>
+                <span *ngIf="tourRegister.PaymentTypeId==3">Thẻ nội địa</span>
+                <span *ngIf="tourRegister.PaymentTypeId==4">Thẻ tín dụng</span>
+                </div>
+              </div>
+            </div>
+            <div class="row surch">
+              <div class="item">
+                <label>Phụ thu</label>
+                <div class="textResult">0đ</div>
+              </div>
+              <div class="itemR clearfix">
+                <label>KM voucher</label>
+                <div class="textResult voucher"><span>{{voucherValue | currencyCustom}}đ</span></div>
+              </div>
+
+              <div class="itemR clearfix">
+                <label>KM nhóm</label>
+                <div class="textResult discountGroupValue">{{discountGroupValue | currencyCustom}}đ</div>
+              </div>
+            </div>
+            <div class="row mar20">
+              <div class="itemTotal clearfix">
+                <label>Tổng tiền</label>
+                <div class="textResult redColor total"><span>{{amount | currencyCustom}}đ</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

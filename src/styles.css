@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+.form-group .error-message {
+  color:  #FF0000;
+}
+/**
+ * paging
+ */
+.paging .ngx-pagination .current,
+.paging .active a {
+  background: #68A236;
+}
+.paging .pagination a:hover {
+  cursor: pointer;
+  background: #68A236;
+}
+.paging .pagination-next,
+.paging .pagination-previous {
+  display: none;
+}
+.paging {
+  margin-left: 14px;
+}
+/**
+ * alertifyjs
+ */
+body .alertify-notifier .ajs-message.ajs-success {
+  /*background: #68A236;*/
+  background: rgba(104, 162, 54, .8);
+}
+.alertify-notifier .ajs-message {
+  color: #FFF;
+}
+/**
+ * date range picker
+ */
+.daterangepicker .daterangepicker_input {
+  display: none !important;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>ic--</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="32" height="32" rx="16"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blue-Manipulator-4" transform="translate(-2.000000, -2.000000)">
+            <g id="ic--" transform="translate(2.000000, 2.000000)">
+                <g id="Base">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#E5E5E5" stroke-width="1" x="0.5" y="0.5" width="31" height="31" rx="15.5"></rect>
+                </g>
+                <path d="M13.2234286,19.6881905 C12.9255238,19.3902857 12.9255238,18.908 13.2234286,18.6108571 L18.6108571,13.2234286 C18.908,12.9255238 19.3902857,12.9255238 19.6881905,13.2234286 C19.9860952,13.5205714 19.9860952,14.0028571 19.6881905,14.3007619 L14.3007619,19.6881905 C14.1514286,19.8367619 13.956381,19.9114286 13.7620952,19.9114286 C13.5670476,19.9114286 13.372,19.8367619 13.2234286,19.6881905 L13.2234286,19.6881905 Z" id="-" fill="#68A236" transform="translate(16.455810, 16.455714) rotate(-315.000000) translate(-16.455810, -16.455714) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

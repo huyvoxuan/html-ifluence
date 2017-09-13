@@ -1,0 +1,106 @@
+<!--contact-->
+<section class="map-content">
+  <div class="map contact-map" *ngIf="branches.length && markers">
+    <app-map [makers]="markers" [isLoadMapDefault]="true" [mapHeight]="400" (output)="markerTarget=$event"
+             (output)="showMarkerPopup()" [zoomValue]="5"></app-map>
+  </div>
+  <!--<div class="location"></div>-->
+  <!--tool tip-->
+  <div class="show-tooltip hidden">
+    <div class="tooltip-show-content">Chi nhánh bình định</div>
+    <div class="tooltip-show-arow"></div>
+  </div>
+
+  <!--popup-address-->
+  <div class="address-content popup hidden" #popup>
+    <div class="address-arrow"></div>
+    <div class="contact-group">
+      <ul>
+        <li class="ic-location" data-address></li>
+        <li class="ic-tax-code">(08) 38 354 919</li>
+        <li class="ic-call" data-phone></li>
+        <li class="ic-print" data-fax></li>
+        <li class="ic-mail" data-email></li>
+        <li class="ic-global">www.antintravel.com</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<section class="contact">
+  <div class="container">
+    <!--address-->
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <h1>Công ty cổ phần Truyền thông và Du lịch An Tín (An Tín Travel)</h1>
+        <div class="social-contact">
+          <ul>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="contact-group">
+          <ul>
+            <li class="ic-location" *ngIf="contact && contact.Address &&contact.Address.SuburbName">
+              {{contact.Address.SuburbName}}
+            </li>
+            <li class="ic-tax-code">0312970194</li>
+            <li class="ic-call" *ngIf="contact.Phone">{{contact.Phone}}</li>
+            <li class="ic-print">(08) 38 354 919</li>
+            <li class="ic-mail" *ngIf="contact.Email">{{contact.Email}}</li>
+            <li class="ic-global" *ngIf="contact.Website">{{contact.Website}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <h1>HOTLINE</h1>
+        <div class="hotline">Tổng đài tư vấn và đặt dịch vụ: <span>1900 636 121</span></div>
+        <div class="hotline">Phản ảnh về chất lượng dịch vụ: <span>0985 266 766</span></div>
+
+        <form name="sendRequest" id="contactForm" novalidate #f="ngForm" (ngSubmit)="f.form.valid && sendRequest()">
+          <h1>GỬI YÊU CẦU</h1>
+          <div class="row">
+            <div class="col-md-6 has-float-label">
+              <input class="form-control" placeholder=" " [(ngModel)]="request.name" name="name" id="name">
+              <label for="name">Họ tên</label>
+            </div>
+
+            <div class="col-md-6 has-float-label">
+              <input class="form-control" placeholder=" " [(ngModel)]="request.phone" name="phone" id="phone">
+              <label for="phone">Điện thoại</label>
+            </div>
+          </div>
+
+          <div class="has-float-label">
+            <input class="form-control" placeholder=" " [(ngModel)]="request.company" name="company" id="company">
+            <label for="company">Công ty</label>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 has-float-label">
+              <input class="form-control form-group" placeholder=" " [(ngModel)]="request.email" name="email" id="email">
+              <label for="email">Email</label>
+            </div>
+            <div class="col-md-6 has-float-label">
+              <input class="form-control form-group" placeholder=" " [(ngModel)]="request.skype" name="skype" id="skype">
+              <label for="skype">Skype</label>
+            </div>
+          </div>
+          <div class="has-float-label">
+            <textarea rows="6" cols="100" class="form-control" id="message" value="" style="resize:none" [(ngModel)]="request.message" name="message"></textarea>
+            <label for="message">Nội dung</label>
+          </div>
+          <!--<div id="success"></div>-->
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" class="btn bg-primary">Gửi đi</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

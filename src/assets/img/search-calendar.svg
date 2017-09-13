@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="14px" viewBox="0 0 13 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>search-calendar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="groupSearch" transform="translate(-522.000000, -29.000000)" fill="#111111">
+            <path d="M527,30 L527,29 L526,29 L526,30 L526,31 L527,31 L527,30 L527,30 Z M525,30 L525,29 L524,29 L524,30 L524,31 L525,31 L525,30 L525,30 Z M533,30 L533,29 L532,29 L532,30 L532,31 L533,31 L533,30 L533,30 Z M531,30 L531,29 L530,29 L530,30 L530,31 L531,31 L531,30 L531,30 Z M529,30 L529,29 L528,29 L528,30 L528,31 L529,31 L529,30 L529,30 Z M522,32 L522,33 L522,42 L523,43 L534,43 L535,42 L535,33 L535,32 L535,31 L534,30 L534,31 L534,32 L533,32 L532,32 L531,32 L530,32 L529,32 L528,32 L527,32 L526,32 L525,32 L524,32 L523,32 L523,31 L523,30 L522,31 L522,32 Z M523,33 L524,33 L525,33 L534,33 L534,42 L523,42 L523,33 Z M529.274697,35 L528.67389,35.6008073 L529.648184,36.5751009 L526,36.5751009 L526,37.4248991 L529.648184,37.4248991 L528.67389,38.3991927 L529.274697,39 L531.275122,37 L529.274697,35 Z" id="search-calendar"></path>
+        </g>
+    </g>
+</svg>

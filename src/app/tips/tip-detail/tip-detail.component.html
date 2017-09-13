@@ -1,0 +1,56 @@
+<!--tips-details-->
+<section class="details" #targetScroll>
+  <div class="container">
+    <div class="row marbottom-breadcrumb">
+      <div class="col-md-8 col-sm-6">
+        <div class="breadcrumb">Trang chủ / <span>Cẩm nang du lịch</span></div>
+      </div>
+      <div class="col-md-4 col-sm-6 text-right"><a uiSref="tips.all" class="back">quay lại</a></div>
+    </div>
+    <div class="row">
+      <!--details-left-->
+      <div class="col-md-8 col-sm-6">
+        <h1><span *ngIf="tip.Name">{{tip.Name}}</span></h1>
+
+        <div *ngIf="tip.RatingCount !== null">
+          <app-ratings [ratingCount]="tip.RatingCount" [containerClass]="'mtop15'"></app-ratings>
+        </div>
+
+        <div class="date">Cập nhật: <span class="date-update" *ngIf="tip.CreatedAt!==null">{{createdAt}}</span></div>
+        <div class="divider mar15"></div>
+
+        <!--description-->
+        <div class="desc"><p *ngIf="tip.Description!==null">{{tip.Description}}</p></div>
+
+        <!--box-comment-->
+        <div class="box-comment" *ngIf="tip.TipId">
+            <app-comments [parentType]="'tip'" [parentID]="tip.TipId" ></app-comments>
+        </div>
+      </div>
+      <!--carousel-->
+      <div class="col-md-4 col-sm-6 slide-right" *ngIf="tip.PhotoUrls && tip.PhotoUrls.length>0">
+        <app-carousel [photoUrls]="tip.PhotoUrls"></app-carousel>
+      </div>
+      <!--sharing-->
+      <div class="col-md-4 col-sm-6 slide-right">
+        <app-social-share [shareTitle]="tip.Name"></app-social-share>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="divider"></div>
+    </div>
+  </div>
+</div>
+
+<!--relation tours-->
+<app-tour-list
+  [apiParams]="apiParams"
+  [listTitle]="'Những Tour Liên Quan'"
+  [isViewMore]="true"
+  [isViewCountTotal]="false">
+</app-tour-list>

@@ -1,0 +1,32 @@
+<div class="row search-box">
+  <form #f="ngForm" novalidate >
+    <div class="col-md-3 col-sm-6 col-xs-12">
+
+      <div class="form-group pull-left w90p">
+        <app-input-dropdown [placeholder]="'I18n.searchTour.from'" [imgSource]="'assets/img/search-locationA.svg'" [input]="startPlace" (output)="startPlace=$event"></app-input-dropdown>
+      </div>
+
+      <div class="icon-arrow"><img src="assets/img/search-arrow.svg" alt=""></div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <app-input-dropdown [placeholder]="'I18n.searchTour.to'" [imgSource]="'assets/img/search-locationB.svg'" [input]="endPlace" (output)="endPlace=$event"></app-input-dropdown>
+    </div>
+
+    <div class="col-md-2 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <div class="icon"><img src="assets/img/search-calendar.svg" alt=""></div>
+        <app-range-date [placeHolder]="'I18n.searchTour.date'" (output)="rangeSelected=$event" (output)="getRangeDate()"></app-range-date>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <div class="icon"><img src="assets/img/search-price.svg" alt=""></div>
+        <input appOnlyNumber="true" type="text" min="0" class="form-control" placeholder="{{'I18n.searchTour.price' | translate}}" name="price" [ngModel]="price | currencyCustom" (ngModelChange)="getPriceValue($event)">
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12 col-xs-12">
+      <button type="button" (click)="findTours()" class="btn bg-yellow btn-radios">{{'I18n.searchTour.search' | translate}}</button>
+    </div>
+  </form>
+</div>

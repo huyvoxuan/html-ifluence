@@ -1,0 +1,12 @@
+<div class="carousel-holder">
+  <div [attr.id]="id" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li  [attr.data-target]="'#' + id" *ngFor="let photo of photoUrls; let index=index" [ngClass]='{active: index == 0}' [attr.data-slide-to]="index"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div *ngFor="let photo of photoUrls; let index=index" [ngClass]="{'active':index==0, 'item':index>=0}">
+        <img class="slide-image" src="{{photo}}" alt=""/>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<a class="tour-item" uiSref="tourDetail" [uiParams]="{ id: tour.TourDepartureScheduleId }">
+  <div class="item">
+    <div class="date">
+      <div class="month">t<span>{{tourMonth}}</span></div>
+      <div class="divider"></div>
+      <div class="day">{{tourDay}}</div>
+    </div>
+    <div class="tour-img">
+      <div class="tour-name">{{tour.Name}}</div>
+      <div class="mask"></div>
+      <img class="img-responsive" src="{{tour.PhotoUrl}}" alt="">
+    </div>
+    <div class="content">
+      <div class="pull-left">
+        <div class="total-day">{{tour.NumOfDays}} ngày {{tour.NumOfNights}} đêm</div>
+        <div class="locationA">{{tour.DepartureName}}</div>
+        <app-ratings [ratingCount]="tour.RatingCount"></app-ratings>
+      </div>
+      <div class="price" *ngIf="tour.DiscountPrice!==null && tour.DiscountPrice>0 else noPriceDiscount">
+        <div class="normal">{{ tour.Price | currencyCustom }} {{tour.Currency.Symbol}}</div>
+        <div class="box-normal red">{{ tour.DiscountPrice | currencyCustom }} {{tour.Currency.Symbol}}</div>
+      </div>
+      <ng-template #noPriceDiscount>
+        <div class="price" >
+          <div class="box-normal">{{ tour.Price | currencyCustom }} {{tour.Currency.Symbol}}</div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</a>

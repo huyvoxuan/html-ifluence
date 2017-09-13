@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="20px" viewBox="0 0 16 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-detail-time</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-details-page" transform="translate(-70.000000, -520.000000)" fill="#000000">
+            <g id="ic-detail-time" transform="translate(70.000000, 520.000000)">
+                <path d="M10.6666667,5.33377778 L10.6666667,0.889333333 L15.1111111,5.33377778 L10.6666667,5.33377778 Z M11.9235556,0.000444444444 L5.33333333,0.000444444444 C4.35288889,0.000444444444 3.55555556,0.798666667 3.55555556,1.77822222 L3.55555556,14.2226667 C3.55555556,15.2022222 4.35288889,16.0004444 5.33333333,16.0004444 L14.2222222,16.0004444 C15.2026667,16.0004444 16,15.2022222 16,14.2226667 L16,4.07688889 L11.9235556,0.000444444444 Z" id="Fill-869"></path>
+                <path d="M1.77777778,3.556 L0,3.556 L0,17.7782222 C0,18.7577778 0.797333333,19.556 1.77777778,19.556 L12.4444444,19.556 L12.4444444,17.7782222 L1.77777778,17.7782222 L1.77777778,3.556 Z" id="Fill-870"></path>
+            </g>
+        </g>
+    </g>
+</svg>

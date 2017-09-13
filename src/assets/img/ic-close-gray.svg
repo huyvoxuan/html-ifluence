@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-close-gray</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-details-page" transform="translate(-900.000000, -307.000000)" fill="#757575">
+            <g id="popup" transform="translate(0.000000, -390.000000)">
+                <polygon id="ic-close-gray" points="920 698.623981 918.376019 697 910 705.376019 901.623981 697 900 698.623981 908.376019 707 900 715.376019 901.623981 717 910 708.625129 918.376019 717 920 715.376019 911.623981 707"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

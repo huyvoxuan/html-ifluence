@@ -1,0 +1,9 @@
+.sticky-1 {
+  position: fixed;
+  top: 100px;
+  right: auto;
+  left: 869.5px;
+  bottom: auto;
+  width: 390px;
+  z-index: 10;
+}

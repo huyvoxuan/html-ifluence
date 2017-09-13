@@ -1,0 +1,41 @@
+<!--member-->
+<section class="member-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 sub-member" [ngClass]="{'col-md-7 col-sm-7': childrenContent === 'voucher','col-md-8 col-sm-8': !childrenContent || childrenContent !== 'voucher'}">
+        <ul>
+          <li><a uiSref="user.tour" uiSrefActive="active">Tour đăng ký</a></li>
+          <li><a uiSref="user.voucher" uiSrefActive="active">khuyến mãi</a></li>
+          <li><a uiSref="user.account" uiSrefActive="active">Cập nhật tài khoản</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12" *ngIf="isViewSearch && childrenContent === 'tour'">
+        <div class="form-group">
+          <form>
+            <div class="icon">
+              <input type="submit" name="search" class="hidden">
+              <img src="assets/img/ic-search.svg" alt="" on-click="submitSearch()">
+            </div>
+            <input class="form-control" placeholder="Search..." name="search" [(ngModel)]="searchText" (ngModelChange)="changeSearchTourValue($event)">
+            <ul class="custom-dropdown" #dropdownList [ngClass]="{'hidden': !suggestList.length}">
+              <li *ngFor="let item of suggestList" (click)="selectedItem(item.Name)" (focus)="selectedItem(item)">{{item.Name}}</li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12" *ngIf="isViewSearch && childrenContent === 'voucher'">
+        <div class="form-group">
+          <div class="icon">
+            <input type="submit" name="search" class="hidden">
+            <img src="assets/img/ic-search.svg" alt="">
+          </div>
+          <input class="form-control" placeholder="Search..." name="searchVoucher" [(ngModel)]="searchVourcherText" (ngModelChange)="changeSearchVoucherValue()">
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-12" *ngIf="isViewChangePoint">
+        <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#modal-changePoint">Đổi điểm</button>
+      </div>
+    </div>
+    <ui-view></ui-view>
+  </div>
+</section>

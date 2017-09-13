@@ -1,0 +1,6 @@
+
+<div class="vote {{containerClass}}" #container>
+  <div *ngFor="let star of [1,2,3,4,5]; let index=index" [ngClass]="{'vote-full': index < ratingCount, 'vote-outline': index>=ratingCount}" class="rating-item" [attr.data-index]="index + 1">
+  </div>
+  <input *ngIf="isEventBinding" class="hidden rating" [(ngModel)]="ratingValue"/>
+</div>

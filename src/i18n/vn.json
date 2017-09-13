@@ -1,0 +1,77 @@
+{
+  "I18n": {
+    "hi": "Xin chào",
+    "title": "An Tin Travel",
+    "welcome":"Welcome to Antintravel",
+    "slogan": "Nơi kiến tạo những hành trình hạnh phúc",
+    "comment": "Bình luận",
+    "like": "Lượt thích",
+    "viewDetail": "Xem chi tiết",
+
+    "navigation": {
+        "travelEvent": "Sự kiện du lịch",
+        "introduction": "Giới thiệu",
+        "domesticTravel": "Du lịch trong nước",
+        "aboardTravel": "Du lịch nước ngoài",
+        "service": "Dịch vụ",
+        "travelGuide": "Cẩm nang du lịch",
+        "news": "Tin tức",
+        "recruitment": "Tuyển dụng",
+        "contact": "Liên hệ",
+        "login": "Đăng nhập",
+        "agency": "Đại lý"
+    },
+
+    "searchTour": {
+        "from": "Điểm đi",
+        "to": "Điểm đến",
+        "price": "Giá",
+        "date": "Ngày khởi hành",
+        "search": "Tìm tour"
+    },
+
+    "home": {
+        "promotion": "Khuyến mãi",
+        "domestic": "Điểm đến nổi bật trong nước",
+        "aboard": "Điểm đến nổi bật nước ngoài",
+        "event": "Sự kiện du lịch"
+    },
+
+    "common": {
+        "send": "Gửi",
+        "viewmore": "Xem thêm",
+        "result": "Kết quả"
+    },
+    "event": {
+        "listTitle": {
+            "prefix": "Sự Kiện",
+            "surfix": "Du Lịch"
+        }
+    },
+    "findTourOnMobileTablet": "Tìm các tour du lịch từ điện thoại di động hoặc máy tính bảng",
+    "whereWillYouGo": "Bạn sẽ đi tiếp ở đâu? Hãy để chúng tôi truyền cảm hứng cho bạn ...",
+    "subcribleNews": "Đăng ký bản tin về các mẹo và công cụ du lịch mở ra thế giới của bạn và giúp bạn đi du lịch thông minh hơn.",
+
+    "companyName": "CÔNG TY CP TRUYỀN THÔNG VÀ DU LỊCH AN TÍN",
+    "companyAddress": "Tòa nhà H3, 384 Hoàng Diệu, P.6, Quận 4, TP.HCM",
+    "companyPhone": "08.38 266 766",
+    "companyEmail": "info@antintravel.com",
+    "licenseBy": "Bản quyền của Antin Travel ® 2017. Bảo lưu mọi quyền.",
+    "licenseNote": "Ghi rõ nguồn \"www.antintravel.com\" ® khi sử dụng lại thông tin từ website này",
+    "userName": "Tài khoản đăng nhập",
+    "firstName": "Tên",
+    "lastName": "Họ",
+    "password": "Mật khẩu",
+    "passwordConfirm": "Xác nhận mật khẩu",
+    "email": "Email",
+    "register": "Đăng ký",
+    "logout": "Thoát",
+    "accountAlready": "Đã có tài khoản?",
+    "signUpModal": "Sign Up",
+    "signInModal": "Sign In",
+    "forgetPassword": "Quên mật khẩu?",
+    "createAccount": "Tạo tài khoản mới",
+    "notAccountYet": "Chưa có tài khoản?",
+    "loginWithFacebook": "Đăng nhập với Facebook"
+  }
+}

@@ -1,0 +1,89 @@
+{
+    "Success": true,
+    "Message": "",
+    "Data": {
+        "AttractionId": 226,
+        "AttractionTypeId": 2,
+        "ParentId": 4,
+        "ParentTypeId": 21,
+        "Name": "Khách sạn Hoàng Mấm Minh Cầu ",
+        "Address": "số 2, đường Minh Cầu, Thái Nguyên",
+        "PhotoUrls": [
+            "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/78efe386-6945-4e29-aeac-5ce8c6e12172.png",
+            "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/b3ee2337-757b-422f-9dfa-9724c7a81e0d.png",
+            "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/99ce1c6a-d6a0-4f6c-978d-dfe4580a5d1a.png",
+            "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/c4320583-3849-483e-86c5-cd54902fd594.png",
+            "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/a6ad58ca-5354-4015-875c-babed3c5b6b4.png"
+        ],
+        "Description": "Khách sạn Hoàng Mấm Minh Cầu tọa lạc tại trung tâm thành phố Thái Nguyên.\r\n\r\nKhách sạn Hoàng Mấm Minh Cầu có 38 phòng nghỉ, được trang bị nội thất cao cấp, phòng khép kín, đầy đủ tiện nghi.  \r\n\r\nĐược trang bị tiện nghi sưởi, các phòng đều có tủ quần áo, màn chống muỗi, TV truyền hình cáp và khu vực tiếp khách. Máy pha trà/cà phê cũng được trang bị trong phòng.\r\n\r\nKhi nghỉ ngơi trong khách sạn tuyệt vời này, khách có thể sử dụng wifi ở khu vực công cộng, phục vụ ăn tại phòng, dịch vụ giặt là/ giặt khô, nhà hàng, đưa đón khách sạn/sân bay, bãi đỗ xe…",
+        "ViewCount": 0,
+        "CommentCount": 0,
+        "RatingCount": 0,
+        "IsLiked": false,
+        "Geog": {
+            "Lat": 21.591846,
+            "Lng": 105.834399
+        },
+        "ListPhotoInfos": [
+            {
+                "PhotoId": 1085,
+                "PhotoName": "78efe386-6945-4e29-aeac-5ce8c6e12172.png",
+                "PhotoUrl": "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/78efe386-6945-4e29-aeac-5ce8c6e12172.png",
+                "SortOrder": 1,
+                "IsMainPhoto": true,
+                "IsAvatar": false,
+                "StatusId": 3,
+                "IsDefault": false,
+                "IsFeatured": false
+            },
+            {
+                "PhotoId": 1086,
+                "PhotoName": "b3ee2337-757b-422f-9dfa-9724c7a81e0d.png",
+                "PhotoUrl": "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/b3ee2337-757b-422f-9dfa-9724c7a81e0d.png",
+                "SortOrder": 2,
+                "IsMainPhoto": true,
+                "IsAvatar": false,
+                "StatusId": 3,
+                "IsDefault": false,
+                "IsFeatured": false
+            },
+            {
+                "PhotoId": 1087,
+                "PhotoName": "99ce1c6a-d6a0-4f6c-978d-dfe4580a5d1a.png",
+                "PhotoUrl": "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/99ce1c6a-d6a0-4f6c-978d-dfe4580a5d1a.png",
+                "SortOrder": 3,
+                "IsMainPhoto": true,
+                "IsAvatar": false,
+                "StatusId": 3,
+                "IsDefault": false,
+                "IsFeatured": false
+            },
+            {
+                "PhotoId": 1088,
+                "PhotoName": "c4320583-3849-483e-86c5-cd54902fd594.png",
+                "PhotoUrl": "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/c4320583-3849-483e-86c5-cd54902fd594.png",
+                "SortOrder": 4,
+                "IsMainPhoto": true,
+                "IsAvatar": false,
+                "StatusId": 3,
+                "IsDefault": false,
+                "IsFeatured": false
+            },
+            {
+                "PhotoId": 1089,
+                "PhotoName": "a6ad58ca-5354-4015-875c-babed3c5b6b4.png",
+                "PhotoUrl": "http://112.109.90.115:8080/Photos/Staging/Attraction/2015/a6ad58ca-5354-4015-875c-babed3c5b6b4.png",
+                "SortOrder": 5,
+                "IsMainPhoto": true,
+                "IsAvatar": false,
+                "StatusId": 3,
+                "IsDefault": false,
+                "IsFeatured": false
+            }
+        ],
+        "StatusId": 3,
+        "StateCode": "Thai Nguyen",
+        "CountryCode": "VN"
+    },
+    "ErrorCode": 0
+}

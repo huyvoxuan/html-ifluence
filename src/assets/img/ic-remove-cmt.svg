@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-remove-cmt</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-details-page" transform="translate(-286.000000, -2815.000000)">
+            <g id="ic-remove-cmt" transform="translate(286.000000, 2815.000000)">
+                <circle id="Oval-4" fill="#000000" cx="11" cy="11" r="11"></circle>
+                <polygon id="ic-close-gray" fill="#FFFFFF" points="16 6.81199035 15.1880096 6 11 10.1880096 6.81199035 6 6 6.81199035 10.1880096 11 6 15.1880096 6.81199035 16 11 11.8125646 15.1880096 16 16 15.1880096 11.8119904 11"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

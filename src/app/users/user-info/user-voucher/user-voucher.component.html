@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-3 col-sm-4 col-xs-12" *ngFor="let voucher of vouchers | searchFilter: 'DiscountPrice,ExpiredDate,VoucherCode': searchText">
+    <div class="voucher">
+      <div class="money" *ngIf="voucher.DiscountPrice">{{voucher.DiscountPrice | currencyCustom}}</div>
+      <div class="money" *ngIf="voucher.DiscountPercent">{{voucher.DiscountPercent}}%</div>
+
+      <div class="date" *ngIf="!isExpired(voucher.ExpiredDate) else expiredEle">Ngày hết hạn: {{voucherDate(voucher.ExpiredDate)}}</div>
+      <ng-template #expiredEle> <div class="date"><span class="expire">Đã hết hạn</span></div></ng-template>
+      <div class="qrcode" *ngIf="voucher.Campaign.PhotoUrl"><img src="{{voucher.Campaign.PhotoUrl}}" alt=""></div>
+      <div class="note" *ngIf="voucher.Campaign.Description"><span>{{voucher.Campaign.Description}}</span>.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal-changePoint -->
+<div class="modal fade" id="modal-changePoint" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Đổi Điểm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #btnClose></button>
+      </div>
+      <div class="modal-body mar-voucher row">
+        <div *ngFor="let camp of voucherCampaigns" class="col-md-4 col-sm-4 col-xs-6">
+          <div class="voucher change-point">
+            <div class="money" *ngIf="camp.DiscountPrice">{{camp.DiscountPrice | currencyCustom}}</div>
+            <div class="money" *ngIf="camp.DiscountPercent">{{camp.DiscountPercent}}</div>
+            <div class="date" *ngIf="camp.Point">{{camp.Point}} điểm</div>
+            <button type="button" class="btn btn-xs bg-primary" on-click="changePoint(camp.CampaignId)">Đổi điểm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

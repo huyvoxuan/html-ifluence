@@ -1,0 +1,36 @@
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" #navigation>
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
+      </button>
+      <div class="navbar-brand nav-login" *ngIf="!loginStatus; else loggedIn">
+        <ul>
+          <li><a id="login" href="#" data-toggle="modal" data-target="#modal-signIn" >{{"I18n.navigation.login" | translate}}</a></li>
+          <li><a class="active" href="http://112.109.90.115:9003/" target="_blank">{{"I18n.navigation.agency" | translate}}</a></li>
+        </ul>
+      </div>
+      <ng-template #loggedIn>
+        <app-user-loggedin></app-user-loggedin>
+      </ng-template>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a uiSref="about" uiSrefActive="active">{{"I18n.navigation.introduction" | translate}}</a></li>
+        <li><a uiSref="domesticTours" uiSrefActive="active">{{"I18n.navigation.domesticTravel" | translate}}</a></li>
+        <li><a uiSref="aboardTours" uiSrefActive="active">{{"I18n.navigation.aboardTravel" | translate}}</a></li>
+        <li><a uiSref="services.airline" uiSrefActive="active">{{"I18n.navigation.service" | translate}}</a></li>
+        <li><a uiSref="events" uiSrefActive="active">{{"I18n.navigation.travelEvent" | translate}}</a></li>
+        <li><a uiSref="tips.shopping" uiSrefActive="active">{{"I18n.navigation.travelGuide" | translate}}</a></li>
+        <li><a uiSref="news" uiSrefActive="active">{{"I18n.navigation.news" | translate}}</a></li>
+        <li><a uiSref="recruitment" uiSrefActive="active">{{"I18n.navigation.recruitment" | translate}}</a></li>
+        <li><a uiSref="contact" uiSrefActive="active">{{"I18n.navigation.contact" | translate}}</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05-book-tour" transform="translate(-689.000000, -1129.000000)">
+            <g id="Group" transform="translate(688.000000, 1127.000000)">
+                <rect id="Rectangle-2" x="0" y="0" width="32" height="11"></rect>
+                <path d="M4.7175,-0.4685 L3.4685,1.0935 L7.4925,5.3115 L3.4685,9.5315 L4.7175,11.0935 L9.7175,6.0935 C9.9545,5.9045 10.0935,5.6155 10.0935,5.3115 C10.0935,5.0085 9.9545,4.7205 9.7175,4.5315 L4.7175,-0.4685 Z" id="Fill-480" fill="#444444" transform="translate(6.781000, 5.312500) rotate(90.000000) translate(-6.781000, -5.312500) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,42 @@
+<!-- Modal-signUp -->
+<div class="modal fade" id="modal-signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                <button #closeModal type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body mar-center">
+              <form (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate enctype="multipart/form-data">
+                <div class="form-group relative">
+                    <div class="icon"><img src="assets/img/ic-feed.svg" alt=""></div>
+                    <input name="lastName" type="text" class="form-control" placeholder="Họ" [(ngModel)]="user.LastName" required #lastName="ngModel">
+                </div>
+                <div class="form-group relative">
+                    <div class="icon"><img src="assets/img/ic-feed.svg" alt=""></div>
+                     <input name="firstName" type="text" class="form-control" placeholder="Tên" [(ngModel)]="user.FirstName" required #firstName="ngModel">
+                </div>
+                <div class="form-group relative" [ngClass]="{ 'has-error': f.submitted && !userName.valid }">
+                    <div class="icon"><img src="assets/img/ic-username.svg" alt=""></div>
+                    <input name="username" type="text" class="form-control" placeholder="Tài khoản đăng nhập" [(ngModel)]="user.UserName" required #userName="ngModel">
+                </div>
+                <div class="form-group relative" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                    <div class="icon"><img src="assets/img/ic-lock.svg" alt=""></div>
+                    <input name="email" type="text" class="form-control" placeholder="Email" [(ngModel)]="user.Email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel">
+                </div>
+                <div class="form-group relative" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                    <input name="password" type="password" class="form-control" placeholder="Mật khẩu" [(ngModel)]="user.Password" required #password="ngModel">
+                </div>
+                <div class="form-group relative" [ngClass]="{ 'has-error': f.submitted && !confirm.valid }">
+                    <div class="icon"><img src="assets/img/ic-lock.svg" alt=""></div>
+                    <input name="confirm" type="password" class="form-control" placeholder="Xác nhận mật khẩu" [(ngModel)]="passwordConfirm" required #confirm="ngModel">
+                </div>
+                <button type="submit" class="btn bg-primary">Đăng ký</button>
+              </form>
+                <div class="text-bold">Đã có tài khoản? <a data-dismiss="modal"data-toggle="modal" data-target="#modal-signIn">Đăng nhập</a></div>
+            </div>
+        </div>
+    </div>
+</div>

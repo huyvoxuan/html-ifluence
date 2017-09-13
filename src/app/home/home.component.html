@@ -1,0 +1,41 @@
+<!--Promotion-->
+<div class="promotion" #elemmentTopHomePage>
+  <app-tour-list
+    [apiParams]="promtionAPIParams"
+    [listTitle]="'I18n.home.promotion'"
+    [isViewCountTotal]="false"
+    [isHome]="true"
+    [listType]="'promotion'"
+  ></app-tour-list>
+</div>
+<!--Domestic-->
+<app-tour-list
+  [apiParams]="domesticAPIParams"
+  [listTitle]="'I18n.home.domestic'"
+  [isViewCountTotal]="false"
+  [isHome]="true"
+  [listType]="'domestic'"
+></app-tour-list>
+<!--Aboard-->
+<app-tour-list
+  [apiParams]="aboardAPIParams"
+  [listTitle]="'I18n.home.aboard'"
+  [isViewCountTotal]="false"
+  [isHome]="true"
+   [listType]="'aboard'"
+></app-tour-list>
+
+<!--event-->
+<section class="event">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"><h1>{{'I18n.home.event' | translate}}</h1></div>
+    </div>
+    <div class="row">
+      <app-event-list
+        [isViewTitle]="true"
+      ></app-event-list>
+    </div>
+  </div>
+</section>
+

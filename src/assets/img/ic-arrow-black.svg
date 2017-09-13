@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-arrow-black</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="groupSearch" transform="translate(-725.000000, -34.000000)" fill="#444444">
+            <path d="M728.7175,31.5315 L727.4685,33.0935 L731.4925,37.3115 L727.4685,41.5315 L728.7175,43.0935 L733.7175,38.0935 C733.9545,37.9045 734.0935,37.6155 734.0935,37.3115 C734.0935,37.0085 733.9545,36.7205 733.7175,36.5315 L728.7175,31.5315 Z" id="ic-arrow-black" transform="translate(730.781000, 37.312500) rotate(90.000000) translate(-730.781000, -37.312500) "></path>
+        </g>
+    </g>
+</svg>

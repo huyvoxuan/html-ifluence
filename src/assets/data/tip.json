@@ -1,0 +1,27 @@
+{
+    "Success": true,
+    "Message": "",
+    "Data": {
+        "Description": "rewrew",
+        "PhotoUrls": [],
+        "IsLiked": false,
+        "RatingCount": 0,
+        "ListPhotoInfos": [],
+        "Address": "Telangana, India",
+        "TipId": 208,
+        "TipTypeId": 1,
+        "Name": "tretre",
+        "LikeCount": 0,
+        "CommentCount": 0,
+        "TipTypeName": null,
+        "CreateByName": null,
+        "StatusId": 3,
+        "StatusName": null,
+        "StateName": "Telangana",
+        "StateCode": "Telangana",
+        "CountryName": "India",
+        "CountryCode": "IN",
+        "CreatedAt": "2017-06-27T09:08:12.1+00:00"
+    },
+    "ErrorCode": 0
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="18px" viewBox="0 0 14 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-lock</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 20.4150621 13.9437931 20.4150621 13.9437931 2.99975172 0 2.99975172"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-details-page" transform="translate(-783.000000, -589.000000)">
+            <g id="popupSignUp" transform="translate(0.000000, -390.000000)">
+                <g id="ic-lock" transform="translate(783.000000, 979.000000)">
+                    <path d="M3.77503448,4.01871724 C3.77503448,2.27085517 5.19331034,0.8532 6.9417931,0.8532 C8.68841379,0.8532 10.1066897,2.27085517 10.1066897,4.01871724" id="Stroke-1" stroke="#000000"></path>
+                    <path d="M9.1952069,11.6218552 C9.1952069,12.8502 8.19962069,13.8464069 6.97189655,13.8464069 C5.74355172,13.8464069 4.74734483,12.8502 4.74734483,11.6218552 C4.74734483,10.3935103 5.74355172,9.39792414 6.97189655,9.39792414 C8.19962069,9.39792414 9.1952069,10.3935103 9.1952069,11.6218552 Z" id="Stroke-3" stroke="#000000"></path>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-6"></g>
+                    <polygon id="Stroke-5" stroke="#000000" mask="url(#mask-2)" points="0.853448276 16.5616138 13.0903448 16.5616138 13.0903448 6.29788966 0.853448276 6.29788966"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,87 @@
+<!--device-->
+<section class="device">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6"><img src="assets/img/device.png" alt="" height="300"></div>
+      <div class="col-md-8 col-sm-6">
+        <h2>Tìm các tour du lịch từ điện thoại di động hoặc máy tính bảng</h2>
+        <div class="badges">
+          <a href="{{appLink.android}}"><img src="assets/img/badge-app-store.svg" alt=""></a>
+          <a href="{{appLink.ios}}"><img src="assets/img/badge-google-play.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--list-range-->
+<section class="list-range">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6"><h4>Du lịch Trong nước</h4></div>
+            <div class="col-md-6"><h4>Du lịch Nước ngoài</h4></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-sm-2" *ngFor="let groupStates of states">
+            <ul class="">
+              <li *ngFor="let state of groupStates">
+                <a uiSrefActive="active" on-click="setSeoInfo(state)"><span>Du lịch </span>{{state.Name}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--subscribe-->
+<section class="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-7">
+        <p>Bạn sẽ đi tiếp ở đâu? Hãy để chúng tôi truyền cảm hứng cho bạn ...</p>
+        <span>Đăng ký bản tin về các mẹo và công cụ du lịch mở ra thế giới của bạn và giúp bạn đi du lịch thông minh hơn.</span>
+      </div>
+      <div class="col-md-4 col-sm-5">
+        <div class="form-group">
+          <form #f="ngForm" name="sendEmail" (ngSubmit)="f.form.valid && sendEmail()">
+            <input class="form-control" placeholder="Email" [(ngModel)]="email" name="email">
+            <button type="submit" class="btn bg-yellow">{{'I18n.common.send' | translate}}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--footer-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1 col-sm-12 col-xs-12 logo"><img src="assets/img/logo.png" alt="" /></div>
+      <div class="col-md-7 col-sm-12 col-xs-12 company">
+        <h3>CÔNG TY CP TRUYỀN THÔNG VÀ DU LỊCH AN TÍN</h3>
+         <ul>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i> Tòa nhà H3, 384 Hoàng Diệu, P.6, Quận 4, TP.HCM</li>
+            <li><i class="fa fa-mobile" aria-hidden="true"></i> 08.38 266 766</li>
+            <li><i class="fa fa-location-arrow" aria-hidden="true"></i> info@antintravel.com</li>
+        </ul>
+        <div class="term">
+            <p>Bản quyền của Antin Travel ® 2017. Bảo lưu mọi quyền.</p>
+            <p>Ghi rõ nguồn "www.antintravel.com" ® khi sử dụng lại thông tin từ website này.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-12 social-footer">
+        <ul class="">
+          <li><a href="#" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/antintravel" class="social-facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" class="social-google-plus"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="https://www.youtube.com/antintravelgroup" class="social-youtube"><i class="fa fa-youtube-play"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

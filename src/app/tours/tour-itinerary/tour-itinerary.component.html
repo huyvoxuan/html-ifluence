@@ -1,0 +1,42 @@
+<!-- Modal-itinerary-detail -->
+<div class="modal fade" id="itinerary-detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="title" *ngIf="attraction && attraction.Name!==null"><span>{{attraction.Name}}</span></div>
+        <!-- rating count -->
+        <div *ngIf="attraction.RatingCount !== null">
+          <app-ratings [ratingCount]="attraction.RatingCount"></app-ratings>
+        </div>
+
+        <div class="relative">
+          <div class="temperature"><span>{{temperature}} </span><span class="celsius">o</span></div>
+           <!--carousel-->
+          <div class="carousel-container" *ngIf="attraction.PhotoUrls && attraction.PhotoUrls.length>0">
+            <app-carousel [photoUrls]="attraction.PhotoUrls"></app-carousel>
+          </div>
+
+          <div class="social-footer social-modal">
+            <app-social-share [isHideLabel]="true" [shareTitle]="attraction.Name"></app-social-share>
+          </div>
+        </div>
+        <div class="desc">
+          <p *ngIf="attraction.Description">{{attraction.Description}}</p>
+        </div>
+        <!-- map view -->
+        <div class="map" *ngIf="attraction.Geog!=null">
+          <app-map [makers]="makers" ></app-map>
+        </div>
+
+        <!--box-comment-->
+        <div class="box-comment" *ngIf="attraction.AttractionId">
+          <app-comments [parentType]="'attraction'" [(parentID)]="attraction.AttractionId" ></app-comments>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

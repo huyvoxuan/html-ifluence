@@ -1,0 +1,22 @@
+{
+    "Success": true,
+    "Message": "",
+    "Data": {
+        "MemberInfo": {
+            "MemberId": 192,
+            "FirstName": "vo",
+            "LastName": "huy",
+            "UserName": "huyvx",
+            "Password": null,
+            "Email": "huyvx@mail.com",
+            "PhotoUrl": "",
+            "StatusId": 17,
+            "DeviceTokenId": null,
+            "DeviceCode": null,
+            "MemberShipInfo": null
+        },
+        "StatusId": 17,
+        "SessionTokenId": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIxOTIiLCJlbWFpbCI6Imh1eXZ4QG1haWwuY29tIiwidW5pcXVlX25hbWUiOiJodXl2eCIsImdyb3Vwc2lkIjoiMTgiLCJpc3MiOiJjb3JwIiwiYXVkIjoiaHR0cDovL3d3dy5leGFtcGxlLmNvbSIsImV4cCI6MTUzMTUzNTYzOCwibmJmIjoxNDk5OTk5NjM4fQ.ScID_tr52r0AdzxwtF2RVrLtqXrNj680BgAPI39bIbc"
+    },
+    "ErrorCode": 0
+}

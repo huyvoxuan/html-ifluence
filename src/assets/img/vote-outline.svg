@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>vote-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M12.1992388,14.933289 L8.26783832,12.4393269 L8,12.2694183 L7.73216168,12.4393269 L3.80076116,14.933289 L4.85076447,10.188024 L4.91324737,9.90564591 L4.69963019,9.71068643 L1.17601727,6.49483192 L5.7991214,6.07953318 L6.10399705,6.05214585 L6.21825087,5.7681647 L8,1.33957583 L9.78174913,5.7681647 L9.89600295,6.05214585 L10.2008786,6.07953318 L14.8239827,6.49483192 L11.3003698,9.71068643 L11.0867526,9.90564591 L11.1492355,10.188024 L12.1992388,14.933289 Z" id="vote-outline" stroke="#68A236"></path>
+    </g>
+</svg>

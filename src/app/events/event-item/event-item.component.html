@@ -1,0 +1,15 @@
+
+<div class="col-md-3 col-sm-3">
+  <div class="event-img" uiSref="eventDetail" [uiParams]="{ id: event.EventId }"><img class="img-responsive" src="{{event.PhotoUrl}}" alt=""></div>
+</div>
+<div class="col-md-3 col-sm-3">
+  <div class="box-content">
+     <a class="title" uiSref="eventDetail" [uiParams]="{ id: event.EventId }"><span *ngIf="event.Name">{{event.Name}}</span></a>
+    <div class="cmt">
+      <div class="like">Bình luận: <span *ngIf="event.CommentCount !== null">{{event.CommentCount}}</span></div>
+      <div class="like">Thích: <span *ngIf="event.LikeCount !== null">{{event.LikeCount}}</span></div>
+    </div>
+    <div class="decr"><span *ngIf="event.Description">{{event.Description}}</span></div>
+    <a class="detail" uiSref="eventDetail" [uiParams]="{ id: event.EventId }">Xem chi tiết</a>
+  </div>
+</div>

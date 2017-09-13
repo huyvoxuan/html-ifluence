@@ -1,0 +1,64 @@
+{
+   "Success":true,
+   "Message":"",
+   "Data":{
+      "EventId":44,
+      "Name":"đàSF",
+      "Description":"ÁDFSAF",
+      "Address":"Da Nang, Vietnam",
+      "Status":{
+         "StatusId":3,
+         "Name":null,
+         "Ordinal":0,
+         "ColorCode":null
+      },
+      "State":{
+         "StateId":86,
+         "StateName":"Đà Nẵng",
+         "StateCode":"Đà Nẵng",
+         "Country":{
+            "CountryId":1,
+            "Name":"Vietnam",
+            "Code":"VN"
+         }
+      },
+      "PhotoInfos":[
+         {
+            "PhotoId":59815,
+            "PhotoName":"914d6296-c2ac-416d-b690-a0cffca766be.png",
+            "PhotoUrl":"http://112.109.90.115:8080/Photos/Staging/Event/2017/914d6296-c2ac-416d-b690-a0cffca766be.png",
+            "SortOrder":1,
+            "IsMainPhoto":true,
+            "IsAvatar":false,
+            "StatusId":3,
+            "IsDefault":false,
+            "IsFeatured":false
+         }
+      ],
+      "PhotoUrls":[
+         "http://112.109.90.115:8080/Photos/Staging/Event/2017/914d6296-c2ac-416d-b690-a0cffca766be.png"
+      ],
+      "CreatedBy":{
+         "MemberId":10,
+         "FirstName":null,
+         "LastName":null,
+         "UserName":null,
+         "Email":null,
+         "PhotoUrl":null,
+         "StatusId":0,
+         "FullName":" "
+      },
+      "LikeCount":0,
+      "CommentCount":0,
+      "RatingCount":0.0,
+      "IsLiked":false,
+      "StateName":"Đà Nẵng",
+      "CountryName":"Vietnam",
+      "StateCode":"Đà Nẵng",
+      "CountryCode":"VN",
+      "CreateByName":" ",
+      "CreatedAt":"2017-06-27T09:09:11.42+00:00",
+      "StatusName":null
+   },
+   "ErrorCode":0
+}

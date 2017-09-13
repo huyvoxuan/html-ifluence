@@ -1,0 +1,14 @@
+<div class="col-md-3 col-sm-3">
+  <div class="event-img" uiSref="newsDetail" [uiParams]="{ id: newsItem.NewsId }"><img class="img-responsive" src="{{newsItem.PhotoUrls}}" alt=""></div>
+</div>
+<div class="col-md-3 col-sm-3">
+  <div class="box-content">
+    <a class="title" uiSref="newsDetail" [uiParams]="{ id: newsItem.NewsId }">{{newsItem.Titile}}</a>
+    <div class="cmt">
+      <div class="like">Lượt thích: <span>{{newsItem.LikeCount}}</span></div>
+      <div class="like">Bình luận: <span>{{newsItem.CommentCount}}</span></div>
+    </div>
+    <div class="decr">{{newsItem.Description}}</div>
+    <a class="" uiSref="newsDetail" [uiParams]="{ id: newsItem.NewsId }">Xem chi tiết</a>
+  </div>
+</div>
