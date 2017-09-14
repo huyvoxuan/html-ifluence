@@ -1,0 +1,7 @@
+<div class="form-group">
+  <div class="icon"><img src="{{imgSource}}" alt=""></div>
+  <input class="form-control" placeholder="{{placeholder | translate}}" [(ngModel)]="value" (ngModelChange)="changeValue()" (blur)="onBlur()">
+  <ul class="state-list" [ngClass]="{'hidden': !list.length, '' : list.length}" #dropdownList>
+    <li *ngFor="let item of list" (click)="selectedItem(item)" (focus)="selectedItem(item)">{{item.StateName}}</li>
+  </ul>
+</div>

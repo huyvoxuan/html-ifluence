@@ -1,0 +1,7 @@
+<div class="paging">
+  <ul class="pagination">
+    <li *ngFor="let pageIndex of pagingArray" [ngClass]="{'active': pageActive == pageIndex}">
+      <a on-click="emitPageIndex(pageIndex)">{{pageIndex}}</a>
+    </li>
+  </ul>
+</div>

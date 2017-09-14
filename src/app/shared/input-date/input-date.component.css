@@ -1,0 +1,5 @@
+.date-picker-container {
+  position: absolute;
+  z-index:10;
+  min-height:290px;
+}
